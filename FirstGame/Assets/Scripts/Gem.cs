@@ -10,7 +10,8 @@ public class Gem : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Player>().AddScore();
+            collision.gameObject.GetComponent<Player>().AddScore(value);
+            Destroy(gameObject);
         }
     }
 }
