@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D rig;
     public float jumpForce;
     public SpriteRenderer sr;
+    public int score;
 
     void FixedUpdate () 
     {
@@ -47,4 +48,10 @@ public class Player : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+        
+    public void AddScore (int amount)
+    {
+        score += amount;
+    }
+
 }
